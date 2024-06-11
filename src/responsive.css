@@ -17,9 +17,17 @@
 .a_testi{
     margin-right:40px !important;
 }
+.slider ul{
+    width:397% !important;
+}
+.a_testimonia .back_btn{
+    left:15px !important;
+}
+.a_testimonia .next_btn{
+    right: 15px !important;
+}
 /* footer */
 .a_footer ul{
-    /* gap:2px !important; */
     justify-content: center;
     margin-top: 7px !important;
 }
