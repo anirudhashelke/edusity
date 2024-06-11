@@ -49,8 +49,8 @@ const Testimonia = () => {
         <div className='slider'>
             <ul ref={slider} >
                 {data.map(({imgpath,name,country},index)=>{
-                    return  <li>
-                    <div key={index} className='slide'>
+                    return  <li  key={index}>
+                    <div className='slide'>
                       <div className='flex gap-2 align-items-center a_testi'>
                         <img src={`edusity/${imgpath}`} alt=""  />
                         <div > 
