@@ -1,0 +1,47 @@
+.a_testimonia{
+    position: relative;
+}
+
+.a_testimonia .back_btn, .next_btn{
+    position: absolute;
+color: #212Ea0 !important;
+top: 50%;
+right: 0;
+transform:translateY(27%);
+padding: 15px;
+width: 50px;
+border-radius: 50%;
+cursor: pointer;
+background: #212EA0;
+
+}
+.a_testimonia .back_btn{
+    left: 0;
+}
+.slider{
+    overflow: hidden;
+}
+.slider ul{
+    display: flex;
+    width: 200%;
+    overflow-x: hidden;
+    transition: 0.5s;
+    /* transform: translateX(-25%); */
+}
+.slider ul li{
+    list-style: none;
+    width: 50%;
+    padding: 20px;
+}
+.slide{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    border-radius: 10px;
+    color: #676767;
+  line-height: 1.4;
+}
+.slide img{
+    width:60px;
+    border-radius: 50%;
+    border: 4px solid #212EA0;
+}

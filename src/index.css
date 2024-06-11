@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+body{
+    background-color: #f5f5f5;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+    line-height: 1;
+    cursor: pointer;
+}
+button{
+    cursor: pointer;
+}
+.a_300{
+    font-weight: 300;
+}
+.a_400{
+    font-weight: 400;
+}
+.a_500{
+    font-weight: 500;
+}
+.a_600{
+    font-weight: 600;
+}
+.a_700{
+    font-weight: 700;
+}
+.a_800{
+    font-weight: 800;
+}
+.a_900{
+    font-weight: 900;
+}

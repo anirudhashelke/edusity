@@ -1,0 +1,38 @@
+@media screen and (max-width: 768px) {
+    h1{
+    font-size: 30px !important;
+    }
+    p{
+    font-size: 13px !important;
+    }
+    /* programs */
+.a_programs{
+    margin-bottom: 10px !important;
+}
+.Program{
+    padding-top:25px  !important;
+    padding-bottom:10px !important;
+}
+/* testimonoals */
+.a_testi{
+    margin-right:40px !important;
+}
+/* footer */
+.a_footer ul{
+    /* gap:2px !important; */
+    justify-content: center;
+    margin-top: 7px !important;
+}
+.a_footer{
+    display: block !important;
+    text-align: center !important;
+}
+/* navbar */
+.a_headers li{
+    padding: 7px  0!important;
+}
+/* campus */
+ .a_campus{
+    padding:10px  !important;
+ }
+}

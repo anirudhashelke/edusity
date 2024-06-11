@@ -1,0 +1,13 @@
+.a_about{
+    position: relative;
+}
+.a_about_icons{
+    position: absolute;
+    width: 60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.a_about_bottom p{
+    color: #676767;
+}

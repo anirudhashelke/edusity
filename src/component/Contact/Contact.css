@@ -1,0 +1,26 @@
+.a_contact li{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    margin: 10px 0;
+}
+.a_contact li img{
+    width: 20px;
+    height: 20px;
+}
+textarea, input:focus{
+    outline: none;
+}
+label{
+    font-weight:500;
+    padding-bottom:5px;
+}
+input{
+    padding: 10px ;
+    background: #EBECFE;
+    width: 100%;
+}
+textarea{
+    background: #EBECFE;
+    width: 100%;
+}

@@ -1,0 +1,9 @@
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    background-image:linear-gradient(rgba(8,0,58,0.7),rgba(8,0,58,0.7)) ,url("/public/edusity/hero.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}

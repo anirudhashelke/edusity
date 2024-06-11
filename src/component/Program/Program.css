@@ -1,0 +1,19 @@
+.a_program{
+    background: rgba(0,15,152,0.3);
+    color: #fff;
+   display: flex;
+   justify-content: center !important;
+   flex-direction: column;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   opacity: 0;
+   padding-top: 70%;
+   transition: 0.3s;
+}
+.a_programs:hover  .a_program{
+    opacity: 1;
+    padding-top: 0;
+}
