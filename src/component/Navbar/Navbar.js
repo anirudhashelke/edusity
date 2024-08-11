@@ -3,6 +3,7 @@ import './Navbar.css'
 import { IoClose, IoMenu } from 'react-icons/io5'
 import clsx from 'clsx'
 import { Link } from 'react-scroll'
+
 // const data = [
 //   "Home",
 //   "Program",
@@ -14,17 +15,19 @@ import { Link } from 'react-scroll'
 // ]
 const Navbar = () => {
   const [MenuBar, setMenuBar] = useState(false);
-
+   
   const [sticky, setSticky] = useState(false)
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      window.scrollY > 700 ? setSticky(true) : setSticky(false);
+      window.scrollY > 690 ? setSticky(true) : setSticky(false);
     })
   }, []);
+  
+ 
   return (
 
-    <nav className={`text-white py-2 flex justify-around  position-fixed w-100 align-items-center top-0 left-0 z-[10]   ${sticky ? 'dark_bg' : ''}`}>
+    <nav className={`text-white py-2 flex justify-around  position-fixed w-100 align-items-center top-0  left-0 z-[10]   ${sticky ? 'dark_bg' : ''}`}>
       <img className='w-[180px] ' src="edusity/logo.png" alt="" />
       <div className='d-flex gap-3 align-items-center' >
         <IoMenu size={40} className='lg:hidden' onClick={() => { setMenuBar(true) }} />
@@ -44,8 +47,8 @@ const Navbar = () => {
       <div className={clsx('fixed h-full w-screen  bg-black/50 lg:hidden backdrop-blur-sm top-0 right-0 -translate-x-full',
         MenuBar && "translate-x-0"
       )}>
-        <div className='text-white bg-[#212EA0] flex--cc  absolute left-0 top-0 h-screen  p-8 gap-9 z-50 flex w-50 '>
-          <IoClose onClick={() => { setMenuBar(false) }} className='absolute top-0 right-0  text-[30px]  ' />
+        <div className=' bg-[#212EA0] flex--cc  absolute left-0 top-0 h-screen  p-8 gap-9 z-50 flex w-50 '>
+          <IoClose onClick={() => { setMenuBar(false) }} className='absolute top-[100px] right-0  text-[30px]  ' />
           <ul className='mt-5 ms-[40px] a_headers ' style={{transition:"0.5s"}}>
             {/* {data.map((values, index) => { */}
             <li   style={{ listStyle: "none" }} ><Link to='hero' smooth={true} offset={0} duration={500} >Home</Link></li>

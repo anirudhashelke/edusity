@@ -1,11 +1,18 @@
 import React from 'react'
 import './Contact.css'
 import { FaArrowRightLong } from 'react-icons/fa6'
+import { useFormik } from 'formik';
+import { signUpSchemas } from '../../Schemas';
+const initialValues={
+  name:"",
+  number:"",
+  message:""
+}
 const Contact = () => {
 
     const [result, setResult] = React.useState("");
 
-    const onSubmit = async (event) => {
+    const onSubmit = async (event) => { 
       event.preventDefault();
       setResult("Sending....");
       const formData = new FormData(event.target);
@@ -28,6 +35,17 @@ const Contact = () => {
       }
     };
 
+     const {values,errors,handleBlur,handleChange,touched} = useFormik({
+      initialValues:initialValues,
+      validationSchema:signUpSchemas,
+
+      onSubmit:(values,action)=>{
+          console.log(values)
+          action.resetForm();
+      }
+     })
+    //  console.log(Formik)
+    // console.log(errors)
   return (
     <div className='container my-5 Contact'>
         <div className='text-center'>
@@ -45,7 +63,6 @@ const Contact = () => {
                             <li><img src="edusity/mail-icon.png" alt="" />  Contact@GreatStack.dev</li>
                             <li><img src="edusity/phone-icon.png" alt="" />  +1 123-345-6788</li>
                             <li><img src="edusity/location-icon.png" alt="" />  77 Massachusetts  Ave, combridge <br /> MA 02234,United States</li>
-                           
                          </ul>
                 </div>
             </div>
@@ -54,15 +71,34 @@ const Contact = () => {
                     <form onSubmit={onSubmit} >
                        <div className='mb-3'>
                        <label htmlFor="Your name">Your name</label><br />
-                       <input type="text" name='name' placeholder='Enter your name' required />
+                       <input type="text" name='name' placeholder='Enter your name' 
+                       autoComplete='off'
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={values.name}
+                       
+                       />
+                       {errors.name && touched.name ?( <p className='text-[red]'>{errors.name}</p>):null}
                        </div>
                        <div className='mb-3'>
-                       <label htmlFor="Phone Number">Phone Number</label><br />
-                       <input type="tel" name='phone' placeholder='Enter Phone Number' required />
+                       <label htmlFor="Mobile Number">Mobile Number</label><br />
+                       <input type="number" name='number' placeholder='Enter Mobile Number' 
+                        autoComplete='off'
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={values.number}
+                       />
+                       {errors.number && touched.number ?(<p className='text-[red]'>{errors.number}</p>):null}
                        </div>
                       <div>
                       <label htmlFor="message">Write your message here</label><br />
-                      <textarea className='p-2' name="message" rows={6} placeholder='Enter your message' required></textarea>
+                      <textarea className='p-2' name="message" rows={6} placeholder='Enter your message' 
+                       autoComplete='off'
+                       onChange={handleChange}
+                       onBlur={handleBlur}
+                       value={values.message}
+                      ></textarea>
+                      {errors.message && touched.message ?(<p className='text-[red]'>{errors.message}</p>):null}
                       </div>
                       <button type='submit' className='px-[25px] py-[13px] bg-[#212EA0] text-[#fff] rounded-full my-3 flex  gap-2 align-items-center  '>Submit <FaArrowRightLong /></button>
                     </form>
